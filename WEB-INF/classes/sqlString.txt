@@ -1,0 +1,4 @@
+drop table card;
+drop table drama;
+create table drama(id int not null primary key AUTO_INCREMENT,dramaName text);
+create table card(id int not null primary key AUTO_INCREMENT,cardDrama int not null,cardId text character set utf8,cardName text character set utf8,cardType enum('text','pic') not null default 'text',attr1 text character set utf8,attr2 text character set utf8,attr3 text character set utf8,content1 text character set utf8,content2 text character set utf8,content3 text character set utf8,content4 text character set utf8,content5 text character set utf8,content6 text character set utf8,content7 text character set utf8,foreign key(cardDrama) references drama(id) on delete cascade on update cascade);
